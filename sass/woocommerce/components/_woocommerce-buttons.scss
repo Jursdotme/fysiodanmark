@@ -1,0 +1,6 @@
+.button,
+#review_form #submit {
+  @extend %button-base;
+@extend %button-raised;
+  display: inline-block;
+}

@@ -1,0 +1,35 @@
+// buttons.scss
+
+// EXAMPLE:
+// name: ($button-primary-color, $button-secondary-color, $button-hover-color, $button-active-color, $button-focus-color, $colorContrast),
+$button-colors: (
+  brand: ($brand-color-1, #fff),
+  error: ($error-color, #fff),
+  alert: ($alert-color, #fff),
+  success: ($success-color, #fff),
+);
+
+@each $name, $colors in $button-colors {
+  $button-primary-color: nth($colors, 1);
+  $button-secondary-color: nth($colors, 2);
+
+  .btn-#{$name} {
+    @extend %button-base;
+    @extend %button-raised;
+    background-color: $button-primary-color;
+    color: $button-secondary-color;
+    &:hover {
+      background-color: shade($button-primary-color, 20%);
+    }
+  }
+}
+
+.btn-white {
+  @extend %button-base;
+  background-color: #fff;
+  color: $brand-color-1;
+  &:hover {
+    background-color: tint($brand-color-1, 70);
+    color: $brand-color-1;
+  }
+}

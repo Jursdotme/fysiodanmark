@@ -1,0 +1,122 @@
+.desktop-navigation-container {
+  @include secondthought-container;
+}
+
+%top-lvl-link {
+  position: relative;
+  float: left;
+  margin-right: 8px;
+  padding: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  > a {
+    // @extend %button-base;
+    display: block;
+    padding: 8px 10px;
+    color: #4f4f4f;
+    text-transform: none;
+    //font-weight: 500;
+    //font-size: 0.875rem;
+
+    &:hover {
+      color: #fff;
+      background-color: $brand-color-1;
+    }
+  }
+  &.current_page_item a {
+    color: #fff;
+    background-color: $brand-color-1;
+  }
+}
+
+header .menu {
+  @include span-columns(12);
+  @include media($navigation-breakpoint-up) {
+    display: block;
+  }
+  @include media($navigation-breakpoint-down) {
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    .page_item_has_children,
+    .menu-item-has-children > {
+      ul {
+        //display: none;
+        position: absolute;
+        z-index: -1;
+        z-index: -1;
+        top: 40px;
+
+        overflow: hidden;
+
+        padding: 10px 0;
+
+        transition: transform 0.3s $animation-curve-fast-out-slow-in,
+                    opacity 0.2s $animation-curve-fast-out-slow-in;
+        transform: scale(0);
+        transform-origin: 0 0;
+
+        opacity: 0;
+        border-radius: 0 0 2px 2px;
+        background: $brand-color-1;
+
+        @include shadow-2dp();
+        will-change: transform;
+        &.is-visible {
+          z-index: 999;
+
+          display: block;
+
+          transform: scale(1);
+
+          opacity: 1;
+        }
+      }
+    }
+
+    &.children,
+    &.sub-menu {
+      li {
+        a {
+          display: block;
+
+          height: 38px;
+          padding: 0 16px;
+
+          white-space: nowrap;
+
+          color: #fff;
+          border: none;
+
+          font-size: 0.875rem;
+          line-height: 38px;
+          &:hover {
+            background: shade($brand-color-1, 20);
+          }
+        }
+      }
+    }
+  }
+
+  > ul {
+    float: left;
+
+    > li {
+      @extend %top-lvl-link;
+    }
+  }
+}
+
+.logo_top .logo {
+  margin-left: 50%;
+
+  transform: translateX(-50%);
+}

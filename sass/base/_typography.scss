@@ -1,0 +1,288 @@
+// Fonts are loaded in footer.php via webfontloader
+$header-font: 'Droid Sans', sans-serif;
+$body-font: 'Droid Sans', sans-serif;
+
+html {
+  font-size: $base-font-size; // Scale typography on mobile
+  line-height: $base-line-height;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  background-color: $base-background-color;
+  background: url(../../img/main_background.png);
+  color: $base-font-color;
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include media($sm-down) {
+    margin-top: 1.5em;
+  }
+  @include media($md-up) {
+    margin-top: 2em;
+  }
+}
+
+h1 {
+  margin-bottom: .3em;
+  color: $base-header-color;
+  font-weight: 700;
+  font-family: $header-font;
+  font-size: 2em;
+  line-height: 1.05;
+}
+
+h2 {
+  margin-bottom: .3em;
+  color: $base-header-color;
+  font-weight: 400;
+  font-family: $header-font;
+  font-size: 1.8em;
+  line-height: 1.2;
+  @include media($sm-down) {
+    margin-top: 1.5em;
+  }
+  @include media($md-up) {
+    margin-top: 2em;
+  }
+
+}
+
+h3 {
+  margin-bottom: .3em;
+  color: $base-header-color;
+  font-weight: 400;
+  font-family: $header-font;
+
+  @include media($sm-down) {
+    font-size: 1.375em;
+    line-height: 1.13636364;
+  }
+  @include media($md) {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+  @include media($lg) {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+}
+
+h4 {
+  margin-bottom: .3em;
+  color: $base-header-color;
+  font-weight: 400;
+  font-family: $header-font;
+
+  @include media($sm-down) {
+    font-size: 1.125em;
+    line-height: 1.11111111;
+  }
+  @include media($md) {
+    font-size: 1.125em;
+    line-height: 1.22222222;
+  }
+  @include media($lg) {
+    font-size: 1.125em;
+    line-height: 1.22222222;
+  }
+
+}
+
+h5 {
+
+}
+
+p {
+  margin: 0 0 2em;
+  // line-height: 1.5em;
+  font-size: 1em; // same as $base-font-size
+  // font-family: $body-font;
+
+  &.date {
+    margin-bottom: .3em;
+    color: transparentize($base-font-color, .6);
+    font-style: italic;
+    font-size: .9em;
+    // font-family: $body-font;
+  }
+
+  &.author {
+    // font-family: $body-font;
+  }
+
+  &.lead {
+    color: tint($base-font-color, 50%);
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+}
+
+hr {
+  margin: $base-line-height 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid $base-border-color;
+  border-left: 0;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+
+  transition: all .1s $curve;
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    color: $hover-link-color;
+  }
+
+  .read-more {
+    position: relative;
+    display: inline-block;
+    margin-left: .2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8em;
+    // font-family: $body-font;
+
+    span {
+      position: absolute;
+      top: -1px;
+      right: -12px;
+      font-style: normal;
+      font-size: 1.5em;
+      // font-family: $body-font;
+    }
+  }
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  margin: $base-line-height 0;
+  padding-left: ($base-font-size * $base-line-height) / 2;
+  border-left: 2px solid $base-border-color;
+  color: tint($base-font-color, 15%);
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // emove browser default
+  margin-bottom: floor($computed-line-height * .75);
+}
+
+dt,
+dd {
+  line-height: $base-line-height;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+.display-1 {
+  line-height: 1;
+  letter-spacing: -0.04em;
+  @include media($sm-up) {
+    font-size: 3.7em;
+  }
+  line-height: 1;
+}
+
+.display-2 {
+  font-size: 3.5em;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.display-3 {
+  font-size: 2.8em;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.display-4 {
+  font-size: 2.152em;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.simplePullQuote {
+  font-family: $header-font;
+  max-width: none;
+  margin: 0;
+  float: left;
+  background: none;
+  margin: $gutter/6 $gutter 0 0;
+  border-top: 5px solid $brand-color-1;
+  border-bottom: 5px solid $brand-color-1;
+  padding: 0px 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 800;
+  color: #000;
+  max-width: 300px;
+  padding: $gutter/2 0;
+  p {
+    font-size: 1.3em;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.colorcontrast {
+  opacity: 0.54;
+}
+
+@for $i from 1 through 8 {
+  .font-size-#{$i} { font-size: 16px + ($i/2); }
+}
+
+.button-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

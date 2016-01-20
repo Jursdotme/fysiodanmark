@@ -1,0 +1,97 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+  &.alignleft {
+    float: left;
+    margin: 0 $gutter 1em 0;
+    @include media($xs) {
+      float: none;
+      margin: 0 auto 1em auto;
+      display: block;
+    }
+  }
+
+  &.alignright {
+    float: right;
+    margin: 0 0 1em $gutter;
+    @include media($xs) {
+      float: none;
+      margin: 0 auto 1em auto;
+      display: block;
+    }
+  }
+
+  &.aligncenter {
+    display: block;
+    margin: 0 auto 1em auto;
+  }
+}
+
+.wp-caption {
+  margin: 0 0 1em;
+  padding: 3px;
+  max-width: 100%;
+  width: auto;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+
+  .wp-caption-text {
+    margin: 0;
+    margin-left: 5px;
+    color: #808080;
+    font-size: .9rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.aligncenter {
+    margin: 0 auto 1em auto;
+  }
+
+  &.alignleft {
+    float: left;
+    margin: 0 $gutter 1em 0;
+    @include media($xs) {
+      float: none;
+      margin: 0 auto 1em auto;
+      display: block;
+    }
+  }
+
+  &.alignright {
+    float: right;
+    margin: 0 0 1em $gutter;
+    @include media($xs) {
+      float: none;
+      margin: 0 auto 1em auto;
+      display: block;
+    }
+  }
+}
+
+// Center content
+
+%center-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-content > div {
+
+  @include media($sm-up) {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @include media($xs) {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

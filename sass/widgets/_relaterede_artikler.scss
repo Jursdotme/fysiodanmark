@@ -1,0 +1,41 @@
+.link-box {
+  background: #e6e6e6;
+  border-radius: $base-border-radius;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    padding: 13px 20px;
+    display: block;
+    &:hover {
+      background: #e6e6e6;
+    }
+    &:last-child {
+      border-radius: 0 0 $base-border-radius $base-border-radius;
+    }
+  }
+}
+
+.link-box-header {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: $base-border-radius $base-border-radius 0 0;
+
+  h3 {
+    background: $brand-color-1;
+    text-align: right;
+    display: inline-block;
+    float: right;
+    margin-top: 50px;
+    padding: 3px 14px;
+    color: #fff;
+  }
+}

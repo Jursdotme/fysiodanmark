@@ -1,0 +1,43 @@
+header.header {
+  background: #fff;
+  // border-bottom: 1px solid #fafafa;
+  @include shadow-2dp();
+  position: relative;
+  z-index: 1000;
+}
+.header-inner {
+  @include secondthought-container;
+  @include pad(0 $gutter/2);
+  .logo {
+    @include media($xs) {
+      // @include span-columns(12);
+      @include span-columns(6);
+      margin: 10px 0;
+      max-width: 140px;
+    }
+
+    @include media($sm-up) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      @include span-columns(3);
+    }
+
+
+    a {
+      display: block;
+
+    }
+    img {
+      display: block;
+      width: 100%;
+
+      @include media($xs) {
+
+      }
+
+      @include media($sm-up) {
+
+      }
+    }
+  }
+}
