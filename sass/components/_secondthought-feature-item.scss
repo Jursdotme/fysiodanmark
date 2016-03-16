@@ -1,0 +1,39 @@
+.secondthought-feature-item {
+  background-color: #fff !important;
+  @include shadow-2dp();
+  border-radius: 2px;
+  .title {
+    font-size: 1.5em;
+    color: #000;
+    line-height: 30px;
+    padding: 20px 20px;
+    margin: 0;
+  }
+  a {
+    background-color: transparent !important;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .meta {
+    background-color: $brand-color-1;
+    text-align: right;
+    border-radius: 0 0 2px 2px;
+    a {
+      padding: 10px 20px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: .875em;
+    }
+  }
+
+  .caption {
+    padding: 17px 20px;
+    p {
+      margin: 0;
+    }
+  }
+  
+}

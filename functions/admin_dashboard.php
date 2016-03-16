@@ -120,7 +120,7 @@ you like.
 
 // Custom Stylesheet
 function secondthought_custom_wp_admin_style() {
-  wp_enqueue_style( 'custom_wp_admin_css', get_template_directory_uri() . '/build/stylesheets/admin.css', false );
+  wp_enqueue_style( 'secondthought_wp_admin_css', get_template_directory_uri() . '/build/stylesheets/admin.css', false );
 	wp_enqueue_style( 'secondthought_kirki' );
 }
 add_action( 'admin_enqueue_scripts', 'secondthought_custom_wp_admin_style' );
@@ -136,8 +136,8 @@ add_filter( 'admin_footer_text', 'secondthought_custom_admin_footer' );
 /************* LOAD CUSTOM secondthought ADMIN COLOR SCHEME *******************/
 
 function load_custom_wp_admin_style() {
-				wp_register_script( 'custom_wp_admin_css', get_template_directory_uri() . '/javascripts/admin-scripts.js', true, '1.0.0' );
-				wp_enqueue_script( 'custom_wp_admin_css' );
+				wp_register_script( 'secondthought_wp_admin_style', get_template_directory_uri() . '/javascripts/admin-scripts.js', true, '1.0.0' );
+				wp_enqueue_script( 'secondthought_wp_admin_style' );
 }
 
 // add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );

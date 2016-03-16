@@ -5,7 +5,7 @@
 %top-lvl-link {
   position: relative;
   float: left;
-  margin-right: 8px;
+  margin-right: 0;
   padding: 0;
   &:last-child {
     margin-right: 0;
@@ -20,12 +20,13 @@
     //font-weight: 500;
     //font-size: 0.875rem;
 
-    &:hover {
-      color: #fff;
-      background-color: $brand-color-1;
-    }
   }
-  &.current_page_item a {
+  &:hover a {
+    color: #fff;
+    background-color: $brand-color-1;
+  }
+  &.current_page_item a,
+  &.current-menu-ancestor a {
     color: #fff;
     background-color: $brand-color-1;
   }
@@ -55,9 +56,9 @@ header .menu {
         z-index: -1;
         top: 40px;
 
-        overflow: hidden;
+        //overflow: hidden;
 
-        padding: 10px 0;
+        padding: 0;
 
         transition: transform 0.3s $animation-curve-fast-out-slow-in,
                     opacity 0.2s $animation-curve-fast-out-slow-in;
@@ -85,6 +86,7 @@ header .menu {
     &.children,
     &.sub-menu {
       li {
+        position: relative;
         a {
           display: block;
 
@@ -101,6 +103,13 @@ header .menu {
           &:hover {
             background: shade($brand-color-1, 20);
           }
+
+        }
+        .sub-menu {
+          top: 0;
+          left: 100%;
+          margin-top: 0;
+
         }
       }
     }

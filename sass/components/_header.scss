@@ -9,14 +9,14 @@ header.header {
   @include secondthought-container;
   @include pad(0 $gutter/2);
   .logo {
-    @include media($xs) {
+    @include media($navigation-breakpoint-down) {
       // @include span-columns(12);
       @include span-columns(6);
-      margin: 10px 0;
+      margin: 12px 0;
       max-width: 140px;
     }
 
-    @include media($sm-up) {
+    @include media($navigation-breakpoint-up) {
       margin-top: 30px;
       margin-bottom: 30px;
       @include span-columns(3);
@@ -32,7 +32,7 @@ header.header {
       width: 100%;
 
       @include media($xs) {
-
+        max-width: 134px;
       }
 
       @include media($sm-up) {

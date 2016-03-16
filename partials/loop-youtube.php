@@ -1,5 +1,6 @@
 <?php if (have_posts()):
 
+	echo "<div class='youtube-list'>";
 
 	while (have_posts()) : the_post(); ?>
 
@@ -9,17 +10,19 @@
     // Output: C4kxS1ksqtw
 	 ?>
 
-	 <button class="md-trigger" data-modal="modal-<?php echo $youtube_id ?>">
+	 <a href="javascript:void(0)" class="md-trigger" data-modal="modal-<?php echo $youtube_id ?>">
      <div class="video-thumbnail" style="background-image:url('http://img.youtube.com/vi/<?php echo $youtube_id ?>/hqdefault.jpg');"></div>
      <h3><?php the_title(); ?></h3>
      <p>
        <?php the_field('beskrivelse'); ?>
      </p>
-   </button>
+   </a>
 
-<?php endwhile; ?>
+<?php endwhile;
 
-<?php while (have_posts()) : the_post(); ?>
+echo "</div>";
+
+while (have_posts()) : the_post(); ?>
 
 	<?php
     $url = get_field('video_url');

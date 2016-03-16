@@ -1,12 +1,19 @@
 <!-- header -->
 
+<?php
+  // Setup Image data
+  $id = get_field('header_logo', 'option');
+  $size = 'full'; // (thumbnail, medium, large, full or custom size)
+  $image_attributes = wp_get_attachment_image_src( $id, $size );
+ ?>
+
 <div class="header_wrapper">
   <header class="header clear" role="banner">
     <div class="header-inner nav-right">
 
       <div class='logo'>
         <a href='<?php echo home_url(); ?>'>
-          <img src='<?php echo get_template_directory_uri(); ?>/img/fd-logo.svg' alt='Logo' class='logo-img'>
+          <img src='<?php echo $image_attributes[0]; ?>' alt='Logo' class='logo-img'>
         </a>
       </div>
 

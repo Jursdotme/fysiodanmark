@@ -40,6 +40,9 @@ main {
       color: #fff;
     }
   }
+  @include media($xs) {
+    display: none;
+  }
 }
 
 .footer-address-bar {
@@ -55,5 +58,10 @@ main {
     width: 100%;
     max-width: 200px;
     margin-bottom: $gutter;
+    @include media($xs) {
+      width: 100%;
+      max-width: 120px;
+      margin-bottom: 18px;
+    }
   }
 }

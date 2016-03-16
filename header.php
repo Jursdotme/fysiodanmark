@@ -35,7 +35,7 @@
 
 	</head>
 
-	<body <?php body_class( ! is_front_page() ? "not-home scale-font-size" : "scale-font-size" ); ?>>
+	<body <?php body_class( (! is_front_page() ? "not-home scale-font-size" : "scale-font-size") . ' ' . (get_field('legacy', 'option') ? 'legacy' : '') . '' . (get_field('no_pagetitle') ? 'no_pagetitle' : '') ); ?>>
 		<div class="wrapper">
 			<?php get_template_part('partials/page_header'); ?>
 			<?php // get_template_part('partials/customizer_page_header'); ?>

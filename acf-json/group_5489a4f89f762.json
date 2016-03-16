@@ -1,0 +1,40 @@
+{
+    "key": "group_5489a4f89f762",
+    "title": "Sideinstillinger",
+    "fields": [
+        {
+            "key": "field_56d58b01fa2bf",
+            "label": "Skjul overskrift",
+            "name": "no_pagetitle",
+            "type": "true_false",
+            "instructions": "Skjul sidens automatisk genererede overskrift og ryk sidens indhold op under sidehovedet.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Skjul overskrift",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1458136007
+}

@@ -29,10 +29,10 @@ $visual-grid-gutter: $gutter ;
 // Colors
 
 // Brand Colors
-$brand-color-1: #6ab500;
-$brand-color-2: #6ab500;
-$brand-color-3: #6ab500;
-$brand-color-4: #6ab500;
+$brand-color-1: #71bf44;
+$brand-color-2: #71bf44;
+$brand-color-3: #71bf44;
+$brand-color-4: #71bf44;
 
 // Grays
 $gray          : lighten(desaturate($brand-color-1, 65%), 30%);
@@ -58,7 +58,7 @@ $light-notice-color: tint($notice-color, 50%);
 $light-success-color: tint($success-color, 50%);
 
 // Background Color
-$base-background-color: #fff;
+$base-background-color: #EAEAEA;
 
 // Font Colors
 $base-font-color: $grey-darker;

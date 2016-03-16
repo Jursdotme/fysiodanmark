@@ -1,9 +1,9 @@
 $sliding-menu-border-color: shade(#f8f8f8, 10%);
-$sliding-menu-background: $brand-color-2;
-$sliding-menu-background-hover: $brand-color-1;
-$sliding-menu-font-color: #fff;
-$sliding-menu-font-color-hover: #fff;
-$sliding-menu-border: 1px solid shade($brand-color-2, 20%);
+$sliding-menu-background: #fff;
+$sliding-menu-background-hover: #fafafa;
+$sliding-menu-font-color: #525252;
+$sliding-menu-font-color-hover: #525252;
+$sliding-menu-border: 1px solid shade(#fff, 20%);
 
 $mobile-menu-width: 220px;
 
@@ -13,7 +13,7 @@ $menu-trigger-color: $brand-color-1;
   @include media($navigation-breakpoint-up) {
     display: none;
   }
-  z-index: 1000;
+  z-index: 1001;
   position: absolute;
   top: 12px;
   right: 15px;
@@ -132,7 +132,7 @@ $menu-trigger-color: $brand-color-1;
 }
 
 .sliding-menu-content {
-  z-index: 1000;
+  z-index: 1001;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background: $sliding-menu-background;
@@ -146,7 +146,7 @@ $menu-trigger-color: $brand-color-1;
   .open-submenu-icon {
     position: absolute;
     right: 0;
-    padding: 8px;
+    padding: 5px 10px 0 0;
     border: 0;
     background: none;
     color: $brand-color-1;
@@ -170,11 +170,11 @@ $menu-trigger-color: $brand-color-1;
     }
 
     li {
-      background: shade($sliding-menu-background, 20%);
+      background: shade($sliding-menu-background, 5%);
 
       .sub-menu {
         li {
-          background: shade($sliding-menu-background, 40%);
+          background: shade($sliding-menu-background, 8%);
         }
       }
     }
@@ -191,11 +191,11 @@ $menu-trigger-color: $brand-color-1;
 
   li a {
     display: block;
-    padding: 1rem;
+    padding: .8em 1em;
     border-bottom: $sliding-menu-border;
     color: $sliding-menu-font-color;
-    text-transform: uppercase;
-    font-weight: bold;
+    // text-transform: uppercase;
+    // font-weight: bold;
 
     &:hover {
       background-color: $sliding-menu-background-hover;

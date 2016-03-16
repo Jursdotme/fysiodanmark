@@ -30,14 +30,20 @@
 @import 'components/gallery';
 @import 'components/footer';
 @import 'components/modal';
+@import 'components/secondthought-feature-item';
+@import 'components/members_map';
+@import 'components/menu_widget';
 
 @import 'widgets/relaterede_artikler';
 @import 'widgets/fysiodanmark_mand';
+@import 'widgets/icon-box';
 
 @import 'vendors/vendors';
 
 @import 'layout/default_page';
 @import 'layout/frontpage';
 @import 'layout/news';
+@import 'layout/produkter';
+@import 'layout/medarbejdere';
 
 @import 'woocommerce/woocommerce_base';

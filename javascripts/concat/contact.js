@@ -6,7 +6,6 @@ $(document).ready(function(){
   if ($('#google_map_search').val() !== '') {
 		setTimeout(function() {
       $('#google_map_search_button').trigger("click");
-        console.log('BUM!');
     }, 2000);
 	}
 

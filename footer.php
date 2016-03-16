@@ -9,10 +9,11 @@
 					<div class="footer-address-bar" role="contentinfo">
 						<img src='<?php echo get_template_directory_uri(); ?>/img/fd-logo-white.svg' alt='Logo' class='logo-img'>
 						<p>
-							JFK Plads 1R 4 sal</br>
-							9000 Aalborg</br>
-							Tlf. 22 62 49 90</br>
-							Email: <a href="mailto:cb@fysdk.dk">cb@fysdk.dk</a>
+							<?php the_field('firmanavn','option') ?></br>
+							<?php the_field('adresse','option') ?></br>
+							<?php the_field('postnummer','option') ?> <?php the_field('by','option') ?></br>
+							Tlf. <?php the_field('telefonnummer','option') ?></br>
+							Email: <a href="mailto:<?php the_field('e-mail','option') ?>"><?php the_field('e-mail','option') ?></a>
 						</p>
 					</div>
 
@@ -25,6 +26,11 @@
 
 		</div>
 		<!-- /wrapper -->
+
+		<?php if ( is_user_logged_in() ) {
+		    get_template_part('partials/dialogues');
+		} ?>
+
 
 		<?php wp_footer(); ?>
 

@@ -5,10 +5,43 @@
     @include pad(0 $gutter/2);
     section {
       @include span-columns(12);
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 5px;
-      @include shadow-2dp();
+    }
+  }
+}
+.not-home.page section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  @include shadow-2dp();
+  .heading,
+  .entry-title {
+    border-bottom: 1px solid #B7B7B7;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+}
+
+.home {
+  .text-sizer {
+    margin-bottom: -30px;
+    position: relative;
+    z-index: 1000;
+    .help-text {
+      color: #fff;
+    }
+    .legacy & {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.home.legacy {
+  .text-sizer {
+    margin-bottom: 6px;
+    position: relative;
+    z-index: 1000;
+    .help-text {
+      color: $base-font-color;
     }
   }
 }
@@ -54,7 +87,26 @@ th {
   }
 }
 
-.video-thumbnail {}
+.youtube-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  // padding: 0 $gutter/2 0 $gutter;
+  flex-wrap: wrap;
+  .md-trigger {
+    @include media($xs) {
+      flex: 1 1 48%;
+    }
+    @include media($sm-up) {
+      flex: 1 1 23%;
+    }
+    margin-right: 2%;
+    min-width: 233px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
 
 .utilities {
   @include secondthought-container;
@@ -63,7 +115,6 @@ th {
 }
 .text-sizer {
   margin: 6px 0;
-
   width: 100%;
   max-width: 250px;
   display: flex;
@@ -130,5 +181,22 @@ th {
       }
     }
   }
+}
 
+.frontpage-box {
+  background-color: #edecec;
+  @include shadow-2dp();
+  border-radius: 6px;
+  border: 5px solid #fff;
+  .widget-title {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .textwidget {
+    padding: 15px;
+  }
 }

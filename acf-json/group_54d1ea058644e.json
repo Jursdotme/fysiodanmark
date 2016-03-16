@@ -15,7 +15,32 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top"
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56e969535ce4f",
+            "label": "Header Logo",
+            "name": "header_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "sow-carousel-default",
+            "library": "all",
+            "min_width": 500,
+            "min_height": 160,
+            "min_size": "",
+            "max_width": 700,
+            "max_height": 300,
+            "max_size": "",
+            "mime_types": "jpg"
         },
         {
             "key": "field_557ed08b84582",
@@ -47,7 +72,8 @@
                 "id": ""
             },
             "message": "Disse oplysninger bliver brugt i bl.a. sidefoden hvor adresse og kontaktinfo bliver vist.",
-            "esc_html": 0
+            "esc_html": 0,
+            "new_lines": "wpautop"
         },
         {
             "key": "field_54d1ea0e7a855",
@@ -207,7 +233,8 @@
                 "id": ""
             },
             "message": "Her kan du definere hjemmeside addresser og sociale mediekontoer.",
-            "esc_html": 0
+            "esc_html": 0,
+            "new_lines": "wpautop"
         },
         {
             "key": "field_54d1eaf87a85f",
@@ -313,6 +340,86 @@
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_56d40d3a57dae",
+            "label": "Funktioner",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56d40d4957daf",
+            "label": "Produkter",
+            "name": "enable_produkter",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Aktiver produkter",
+            "default_value": 0
+        },
+        {
+            "key": "field_56d415171f3d8",
+            "label": "Medarbejdere",
+            "name": "enable_employees",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Aktiver medarbejdere",
+            "default_value": 1
+        },
+        {
+            "key": "field_56d56c518c0d5",
+            "label": "Legacy",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56d56c5b8c0d6",
+            "label": "Brug gammel sideudseende",
+            "name": "legacy",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Brug gammel sideudseende",
+            "default_value": 0
         }
     ],
     "location": [
@@ -330,5 +437,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1434374927
+    "active": 1,
+    "description": "",
+    "modified": 1458137560
 }
