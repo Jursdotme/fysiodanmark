@@ -233,3 +233,63 @@ if (get_field('enable_employees', 'option')) {
 	// Hook into the 'init' action
 	add_action( 'init', 'medarbejder_post_type', 0 );
 }
+
+// Register Custom Post Type
+function global_news() {
+
+	$labels = array(
+		'name'                  => _x( 'Globale nyheder', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Global nyhed', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Globale nyheder', 'text_domain' ),
+		'name_admin_bar'        => __( 'Globale nyheder', 'text_domain' ),
+		'archives'              => __( 'Nyhedsarkiv', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent item', 'text_domain' ),
+		'all_items'             => __( 'Alle nyheder', 'text_domain' ),
+		'add_new_item'          => __( 'Tilføj ny nyhed', 'text_domain' ),
+		'add_new'               => __( 'Tilføj ny', 'text_domain' ),
+		'new_item'              => __( 'Ny nyhed', 'text_domain' ),
+		'edit_item'             => __( 'Ret nyhed', 'text_domain' ),
+		'update_item'           => __( 'Opdater nyhed', 'text_domain' ),
+		'view_item'             => __( 'Vis nyhed', 'text_domain' ),
+		'search_items'          => __( 'Find nyhed', 'text_domain' ),
+		'not_found'             => __( 'Ikke fundet', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Ikke fundet i papirkurven', 'text_domain' ),
+		'featured_image'        => __( 'Nyhedsbillede', 'text_domain' ),
+		'set_featured_image'    => __( 'Tilføj nyhedsbillede', 'text_domain' ),
+		'remove_featured_image' => __( 'Fjern nyhedsbillede', 'text_domain' ),
+		'use_featured_image'    => __( 'Brug nyhedsbilllede', 'text_domain' ),
+		'insert_into_item'      => __( 'Indsæt i nyhed', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Upload til nyhed', 'text_domain' ),
+		'items_list'            => __( 'Nyhedsliste', 'text_domain' ),
+		'items_list_navigation' => __( '', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Global nyhed', 'text_domain' ),
+		'description'           => __( 'Globale nyheder på tværs af sites.', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', ),
+		'rewrite'            	=> array( 'slug' => 'global' ),
+		'show_in_rest'      	=> true,
+        'rest_base'          	=> 'global-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+		'taxonomies'            => array( ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'query_var'          	=> true,
+		'menu_position'         => 3,
+		'menu_icon'             => 'dashicons-networking',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'global_news', $args );
+
+}
+add_action( 'init', 'global_news', 0 );
