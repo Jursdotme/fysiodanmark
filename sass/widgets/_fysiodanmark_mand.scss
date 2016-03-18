@@ -23,6 +23,22 @@ svg {
   }
 }
 
+.old {
+  svg {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 125px;
+    .svg_man {
+      fill: #CECECE;
+      transition: all .2s $curve;
+      &:hover {
+        fill: $brand-color-1;
+      }
+    }
+  }
+}
+
 .brand {
   .svg_man {
     fill: $brand-color-1;

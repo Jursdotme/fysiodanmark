@@ -22,8 +22,9 @@ class Fysiodanmark_Mand_Widget extends SiteOrigin_Widget {
 		        'label' => __( 'Choose style', 'widget-form-fields-text-domain' ),
 		        'default' => 'brand',
 		        'options' => array(
-		            'brand' => __( 'Brand', 'widget-form-fields-text-domain' ),
-		            'white' => __( 'White', 'widget-form-fields-text-domain' ),
+		            'brand' => __( 'Grøn', 'widget-form-fields-text-domain' ),
+		            'white' => __( 'Hvid', 'widget-form-fields-text-domain' ),
+								'old' => __( '2013 version', 'widget-form-fields-text-domain' ),
 		        )
 		    )
 			),

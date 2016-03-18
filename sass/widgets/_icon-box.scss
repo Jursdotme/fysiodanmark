@@ -1,5 +1,5 @@
 .so-widget-icon-box-widget,
-.so-widget-icon-box-mand-widget {
+.so-widget-fysiodanmark-mand-widget {
   .wrapper {
     background-position: left bottom;
     background-size: contain;
@@ -29,22 +29,9 @@
   .caption {
     padding: 10px;
   }
-  svg {
-    position: absolute;
-    left: 10px;
-    bottom: 0;
-    width: 125px;
-    .svg_man {
-      fill: #CECECE;
-      transition: all .2s $curve;
-      &:hover {
-        fill: $brand-color-1;
-      }
-    }
-  }
 }
 
-.so-widget-icon-box-mand-widget {
+.so-widget-fysiodanmark-mand-widget {
   .content {
     width: 58%;
   }
