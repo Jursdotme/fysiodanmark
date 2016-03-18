@@ -391,8 +391,8 @@
         },
         {
             "key": "field_56d56c518c0d5",
-            "label": "Legacy",
-            "name": "",
+            "label": "Udseende",
+            "name": "udseende",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -455,5 +455,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1458139712
+    "modified": 1458291996
 }

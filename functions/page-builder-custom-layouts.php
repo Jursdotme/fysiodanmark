@@ -871,10 +871,10 @@ function mytheme_prebuilt_layouts($layouts){
     ),
   );
 
-  $layouts['klinik legacy'] = array (
-    'name' => __('Forside (Klinik legacy)', 'vantage'),    // Required
+  $layouts['klinik 2013'] = array (
+    'name' => __('Forside (Klinik 2013)', 'vantage'),    // Required
     'description' => __('Forside for fysiodanmark kliniksider (2013).', 'vantage'),    // Optional
-    'widgets' => 
+    'widgets' =>
     array (
       0 =>
       array (
@@ -1077,7 +1077,7 @@ function mytheme_prebuilt_layouts($layouts){
         '_sow_form_id' => '56e95516262b9',
         'panels_info' =>
         array (
-          'class' => 'Custom_Widget',
+          'class' => 'Icon_Box_Widget',
           'grid' => 2,
           'cell' => 0,
           'id' => 4,
@@ -1104,7 +1104,7 @@ function mytheme_prebuilt_layouts($layouts){
         '_sow_form_id' => '56e967b635c4c',
         'panels_info' =>
         array (
-          'class' => 'Custom_Widget',
+          'class' => 'Icon_Box_Widget',
           'grid' => 2,
           'cell' => 1,
           'id' => 5,
@@ -1131,7 +1131,7 @@ function mytheme_prebuilt_layouts($layouts){
         '_sow_form_id' => '56e959403e187',
         'panels_info' =>
         array (
-          'class' => 'Custom_Widget',
+          'class' => 'Icon_Box_Widget',
           'grid' => 2,
           'cell' => 2,
           'id' => 6,

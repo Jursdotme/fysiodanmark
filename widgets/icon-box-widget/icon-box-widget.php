@@ -6,7 +6,7 @@ Author: Inzite
 Author URI: http://inzite.dk
 */
 
-class Custom_Widget extends SiteOrigin_Widget {
+class Icon_Box_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
 			'icon-box-widget',
@@ -90,4 +90,4 @@ class Custom_Widget extends SiteOrigin_Widget {
 		return 'icon-box-widget-style';
 	}
 }
-siteorigin_widget_register('icon-box-widget', __FILE__, 'Custom_Widget');
+siteorigin_widget_register('icon-box-widget', __FILE__, 'Icon_Box_Widget');
