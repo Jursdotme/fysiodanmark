@@ -420,6 +420,22 @@
             },
             "message": "Brug gammel sideudseende",
             "default_value": 0
+        },
+        {
+            "key": "field_56e972120f57d",
+            "label": "Sideoverskrifter",
+            "name": "no_headers",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Skjul automatiske overskrifter",
+            "default_value": 0
         }
     ],
     "location": [
@@ -439,5 +455,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1458137560
+    "modified": 1458139712
 }
