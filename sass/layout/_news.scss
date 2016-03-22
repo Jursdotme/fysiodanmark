@@ -12,7 +12,7 @@
 
   article {
     background-color: #fff;
-    padding: 30px;
+    //padding: 30px;
     border-radius: 5px;
   }
 
@@ -21,12 +21,31 @@
   }
 }
 
-.news {
+.single-post {
   article {
+    padding: 30px;
+
+    .date {
+      font-size: 1em;
+      color: $brand-color-1;
+      line-height: 24px;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-style: normal;
+      margin: 0 0 $gutter 0;
+    }
+  }
+}
+
+.news {
+  section {
     background-color: #fff;
     padding: 30px;
     border-radius: 5px;
-    margin: $gutter*2 0;
+
+  }
+  article {
+    // margin: $gutter*2 0;
     display: flex;
     // flex-wrap: wrap;
     @include media($sm-down) {
@@ -59,11 +78,14 @@
 }
 
 .basic-news-loop {
+  margin-top: 30px;
+  .content {
+    padding-bottom: 24px;
+  }
   .title {
     font-size: 1.25em;
     color: #4F4F4F;
     line-height: 19px;
-    margin-top: 40px;
     a {
       color: #4F4F4F;
     }
@@ -74,7 +96,7 @@
   }
   .date {
     font-size: 1em;
-    color: #6AB500;
+    color: $brand-color-1;
     line-height: 24px;
     text-transform: uppercase;
     font-weight: 300;

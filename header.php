@@ -24,10 +24,10 @@
 		<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 		<link rel="manifest" href="/manifest.json">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6ab500">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#71bf44">
 		<meta name="apple-mobile-web-app-title" content="Fysiodanmark">
 		<meta name="application-name" content="Fysiodanmark">
-		<meta name="msapplication-TileColor" content="#6ab500">
+		<meta name="msapplication-TileColor" content="#71bf44">
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 

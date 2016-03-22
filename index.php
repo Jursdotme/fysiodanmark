@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php _e( 'Artikler', 'secondthought' ); ?></h1>
+			<h1><?php _e( 'Nyheder', 'secondthought' ); ?></h1>
 
 			<?php get_template_part('partials/loop'); ?>
 

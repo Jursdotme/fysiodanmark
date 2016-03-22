@@ -526,7 +526,7 @@ function mytheme_prebuilt_layouts($layouts){
         array (
           'padding' => '30px',
           'row_stretch' => 'full',
-          'background' => '#6ab500',
+          'background' => '#71bf44',
           'background_display' => 'tile',
           'center-content' => '',
           'matchheight' => '',
@@ -801,7 +801,7 @@ function mytheme_prebuilt_layouts($layouts){
         'style' => array (
           'padding' => '30px',
           'row_stretch' => 'full',
-          'background' => '#6ab500',
+          'background' => '#71bf44',
           'background_display' => 'tile',
           'center-content' => '',
           'matchheight' => '',
@@ -903,7 +903,7 @@ function mytheme_prebuilt_layouts($layouts){
                   array (
                     'align' => 'center',
                     'theme' => 'flat',
-                    'button_color' => '#6ab500',
+                    'button_color' => '#71bf44',
                     'text_color' => '#ffffff',
                     'hover' => true,
                     'font_size' => '1',

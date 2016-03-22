@@ -1,0 +1,21 @@
+.so-widget-header-widget {
+  display: flex;
+  align-items: stretch;
+  min-height: 250px;
+  @include media($xs) {
+    flex-direction: column;
+  }
+  .title {
+    // flex: 1 1 auto;
+    padding: $gutter;
+    background-color: $brand-color-1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .image {
+    flex: 1 1 auto;
+    background-size: cover;
+    background-position: center;
+  }
+}

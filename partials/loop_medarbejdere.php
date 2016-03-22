@@ -4,8 +4,8 @@
 	$medarbejderid++;
 	// Setup Image data
 	$id = get_field('portrat');
-	$size_1 = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-	$size_2 = 'medium';
+	$size_1 = 'portrait'; // (thumbnail, medium, large, full or custom size)
+	$size_2 = 'portrait';
 	$image_attributes_1 = wp_get_attachment_image_src( $id, $size_1 );
 	$image_attributes_2 = wp_get_attachment_image_src( $id, $size_2 );
 	?>
@@ -27,12 +27,14 @@
 					<div class="content-style-overlay">
 						<span class="icon icon-close">Close the overlay</span>
 						<div class="image">
-							<img src="<?php echo $image_attributes_1[0]; ?>" />
+							<img src="<?php echo $image_attributes_2[0]; ?>" />
 						</div>
 						<h2><?php the_title(); ?></h2>
-						<p>
-							<i class="fa fa-fw fa-envelope"></i> <a href="mailto:<?php the_field('email_addresse'); ?>"><?php the_field('email_addresse'); ?></a>
-						</p>
+						<?php if (get_field('email_addresse')): ?>
+							<p>
+								<i class="fa fa-fw fa-envelope"></i> <a href="mailto:<?php the_field('email_addresse'); ?>"><?php the_field('email_addresse'); ?></a>
+							</p>
+						<?php endif; ?>
 						<div class="biography">
 							<?php the_content(); ?>
 						</div>
