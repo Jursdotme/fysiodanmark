@@ -18,7 +18,7 @@
 								<?php the_field('adresse','option') ?></br>
 								<?php the_field('postnummer','option') ?> <?php the_field('by','option') ?></br>
 								Tlf. <?php the_field('telefonnummer','option') ?></br>
-								Email: <a href="mailto:<?php the_field('e-mail','option') ?>"><?php the_field('e-mail','option') ?></a>
+								Email: <a href="mailto:<?php the_field('email_addresse','option') ?>"><?php the_field('email_addresse','option') ?></a>
 							</p>
 						</div>
 
