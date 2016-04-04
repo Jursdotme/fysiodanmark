@@ -12,6 +12,13 @@
   }
 }
 
+.fillerup {
+  @media screen and (max-width: 767px) {
+    height: auto !important;
+    padding: $gutter*2 $gutter/2;
+  }
+}
+
 
 .location-search-form {
   display: block;
