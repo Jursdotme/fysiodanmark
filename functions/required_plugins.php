@@ -89,6 +89,12 @@ function my_theme_register_required_plugins() {
             'required'  => false,
         ),
 
+        array(
+            'name'      => 'Quick Bulk Post & Page Creator',
+            'slug'      => 'quick-bulk-post-page-creator',
+            'required'  => false,
+        ),
+
         // Install Contact Form 7.
         array(
             'name'      => 'Contact Form 7',
