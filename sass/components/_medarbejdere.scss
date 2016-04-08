@@ -44,8 +44,19 @@
 	margin-top: 10px;
 }
 
+.read-more a {
+	text-align: right;
+	background-color: $brand-color-1;
+  padding: 5px 15px;
+	color: #fff;
+	display: block;
+	text-transform: uppercase;
+	font-size: .8em;
+}
+
 .medarbejder-details {
-	background-color: rgba(#fff,.5);
+	background-color: rgba(#fff,.8);
+	-webkit-backdrop-filter: blur(3px);
   position: fixed;
   left: 0;
   top: 0;
@@ -56,11 +67,12 @@
   justify-content: center;
   transform: scale(0);
   opacity: 0;
-  transition: all .3s $curve;
+  transition: opacity .2s $curve .3s, transform 0s $curve .5s;
   align-items: center;
   &.active {
     opacity: 1;
     transform: scale(1);
+		transition: opacity .3s $curve ;
   }
 }
 
@@ -74,32 +86,49 @@
   border-radius: 5px;
   //overflow: scroll;
   @include shadow-4dp();
+
+	transform: scale(0);
+  opacity: 0;
+	transition: all .3s $curve .2s;
+	.active & {
+		opacity: 1;
+    transform: scale(1);
+		transition: all .3s $curve;
+	}
+
   .basic-info {
     width: 100%;
-    display: block;
+    display: flex;
     float: left;
     background-color: $brand-color-1;
     border-radius: 5px 5px 0 0;
     .image {
-      width: 20%;
-      float: left;
-      max-width: 100px;
+			max-width: 100px;
       img {
         border-radius: 5px 0 0 0;
       }
     }
     .meta {
-      padding: $gutter/2;
+      padding: $gutter/2 49px $gutter/2 $gutter/2 ;
       float: left;
       color: #fff;
+	    width: 68%;
       a {
         color: #fff;
       }
+
+			@media (max-width: 540px) {
+				font-size: 0.7em;
+			}
     }
   }
   .biography {
     float: left;
     padding: $gutter;
+		@media (max-width: 540px) {
+			font-size: 0.8em;
+			padding: $gutter/2;
+		}
   }
   .close {
     position: absolute;
