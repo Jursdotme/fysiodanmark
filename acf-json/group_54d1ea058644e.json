@@ -37,10 +37,10 @@
             "min_width": 500,
             "min_height": 160,
             "min_size": "",
-            "max_width": 700,
-            "max_height": 300,
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
-            "mime_types": "jpg"
+            "mime_types": ""
         },
         {
             "key": "field_557ed08b84582",
@@ -391,8 +391,8 @@
         },
         {
             "key": "field_56d56c518c0d5",
-            "label": "Udseende",
-            "name": "udseende",
+            "label": "2013 instillinger",
+            "name": "2013_instillinger",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -422,7 +422,7 @@
             "default_value": 0
         },
         {
-            "key": "field_56e972120f57d",
+            "key": "field_56e96eaac49c1",
             "label": "Sideoverskrifter",
             "name": "no_headers",
             "type": "true_false",
@@ -455,5 +455,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1458291996
+    "modified": 1459927044
 }
