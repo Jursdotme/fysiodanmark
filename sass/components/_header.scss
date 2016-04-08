@@ -19,7 +19,10 @@ header.header {
     @include media($navigation-breakpoint-up) {
       margin-top: 30px;
       margin-bottom: 30px;
-      @include span-columns(3);
+      float: left;
+      display: block;
+      width: 100%;
+      max-width: 230px;
     }
 
 
