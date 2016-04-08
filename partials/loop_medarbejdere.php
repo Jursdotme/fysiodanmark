@@ -1,51 +1,69 @@
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php
+
+	$medarbejderid = 0;
+
+	if (have_posts()):
+		while (have_posts()) : the_post(); ?>
 
 	<?php
 	$medarbejderid++;
 	// Setup Image data
 	$id = get_field('portrat');
-	$size_1 = 'portrait'; // (thumbnail, medium, large, full or custom size)
-	$size_2 = 'portrait';
-	$image_attributes_1 = wp_get_attachment_image_src( $id, $size_1 );
-	$image_attributes_2 = wp_get_attachment_image_src( $id, $size_2 );
+	$size = 'portrait'; // (thumbnail, medium, large, full or custom size)
+	$image_attributes = wp_get_attachment_image_src( $id, $size );
 	?>
 
-	<div class="medarbejder">
+	<div class="medarbejder_thumbnail">
 		<div class="portrait">
-			<img src="<?php echo $image_attributes_1[0]; ?>" alt="" />
+			<img src="<?php echo $image_attributes[0]; ?>" alt="" />
 		</div>
 		<div class="caption" data-mh="medarbejder-caption">
 			<h3><?php the_title(); ?></h3>
 			<p class="titel"><?php the_field('titel'); ?></p>
 		</div>
-		<div class="morph-button morph-button-overlay morph-button-fixed modal-<?php echo $medarbejderid; ?>">
-			<button type="button">
+		<div class="read-more">
+			<a href="javascript:void(0)" class="fire_modal" data-modal="#modal_<?php echo $medarbejderid; ?>">
 				Læs mere
-			</button>
-			<div class="morph-content" style="left: 802.5px; top: 130.234px;">
-				<div>
-					<div class="content-style-overlay">
-						<span class="icon icon-close">Close the overlay</span>
-						<div class="image">
-							<img src="<?php echo $image_attributes_2[0]; ?>" />
-						</div>
+			</a>
+		</div>
+	</div>
+
+<?php endwhile; ?>
+
+<?php endif;
+
+$medarbejderid = 0;
+
+if (have_posts()):
+	while (have_posts()) : the_post();
+
+	$medarbejderid++;
+	$id = get_field('portrat');
+	$size = 'portrait'; // (thumbnail, medium, large, full or custom size)
+	$image_attributes = wp_get_attachment_image_src( $id, $size );
+	?>
+
+	<div class="medarbejder-details" id="modal_<?php echo $medarbejderid; ?>">
+		<div class="medarbejder-details-inner">
+				<span class="icon icon-close close"><i class="fa fa-times"></i></span>
+				<div class="basic-info">
+					<div class="image">
+						<img src="<?php echo $image_attributes[0]; ?>" />
+					</div>
+					<div class="meta">
 						<h2><?php the_title(); ?></h2>
 						<?php if (get_field('email_addresse')): ?>
 							<p>
 								<i class="fa fa-fw fa-envelope"></i> <a href="mailto:<?php the_field('email_addresse'); ?>"><?php the_field('email_addresse'); ?></a>
 							</p>
 						<?php endif; ?>
-						<div class="biography">
-							<?php the_content(); ?>
-						</div>
 					</div>
 				</div>
-			</div>
+				<div class="biography">
+					<?php the_content(); ?>
+				</div>
 		</div>
 	</div>
-
-
-
 <?php endwhile; ?>
 
-<?php endif; ?>
+<?php endif;
