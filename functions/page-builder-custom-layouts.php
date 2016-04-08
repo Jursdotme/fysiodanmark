@@ -1,6 +1,7 @@
 <?php
 function mytheme_prebuilt_layouts($layouts){
   $layouts['produktoversigt'] = array (
+    'screenshot' => get_template_directory_uri() . '/img/template-screeshots/produktoversigt.png',
     'name' => __('Produktoversigt', 'vantage'),    // Required
     'description' => __('Listning af produkter fra produkt sektionen.', 'vantage'),    // Optional
     'widgets' =>
@@ -80,6 +81,7 @@ function mytheme_prebuilt_layouts($layouts){
     ),
   );
   $layouts['medarbejder-oversigt'] = array (
+    'screenshot' => get_template_directory_uri() . '/img/template-screeshots/medarbejder-oversigt.png',
     'name' => __('Medarbejder Oversigt', 'vantage'),    // Required
     'description' => __('Listning af medarbejdere.', 'vantage'),    // Optional
     'widgets' =>
@@ -126,6 +128,7 @@ function mytheme_prebuilt_layouts($layouts){
     ),
   );
   $layouts['forside-klinik'] = array (
+    'screenshot' => get_template_directory_uri() . '/img/template-screeshots/forside-klinik.png',
     'name' => __('Forside (Klinik)', 'vantage'),    // Required
     'description' => __('Forside for fysiodanmark kliniksider.', 'vantage'),    // Optional
     'widgets' =>
@@ -610,6 +613,7 @@ function mytheme_prebuilt_layouts($layouts){
 
 
   $layouts['forside-hovedside'] = array (
+    'screenshot' => get_template_directory_uri() . '/img/template-screeshots/forside-hovedside.png',
     'name' => __('Forside (Hovedside)', 'vantage'),    // Required
     'description' => __('Forside for fysiodanmark hovedsiden.', 'vantage'),    // Optional
     'widgets' => array (
@@ -871,7 +875,8 @@ function mytheme_prebuilt_layouts($layouts){
     ),
   );
 
-  $layouts['klinik 2013'] = array (
+  $layouts['klinik-2013'] = array (
+    'screenshot' => get_template_directory_uri() . '/img/template-screeshots/klinik-2013.png',
     'name' => __('Forside (Klinik 2013)', 'vantage'),    // Required
     'description' => __('Forside for fysiodanmark kliniksider (2013).', 'vantage'),    // Optional
     'widgets' =>
