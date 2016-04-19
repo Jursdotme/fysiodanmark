@@ -95,13 +95,14 @@ th {
   flex-wrap: wrap;
   .md-trigger {
     @include media($xs) {
-      flex: 1 1 48%;
+      flex: 1 1 100%;
     }
     @include media($sm-up) {
       flex: 1 1 23%;
     }
     margin-right: 2%;
     min-width: 233px;
+    flex-basis: 233px !important;
     &:last-child {
       margin-right: 0;
     }
