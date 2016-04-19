@@ -16,7 +16,9 @@
 }
 
 .portrait {
-	background-color: #fff;
+	background-color: #ececec;
+  padding: 20px;
+  padding-bottom: 0;
 	img {
 		width: 100%;
     height: auto;
@@ -28,7 +30,7 @@
 }
 
 .caption   {
-	padding: 15px;
+	padding: 20px;
 	h3 {
 		font-size: 1.2em;
 	}
@@ -47,7 +49,7 @@
 .read-more a {
 	text-align: right;
 	background-color: $brand-color-1;
-  padding: 5px 15px;
+  padding: 7px 20px;
 	color: #fff;
 	display: block;
 	text-transform: uppercase;
