@@ -284,3 +284,12 @@ table {
     }
   }
 }
+
+@for $i from 1 through 6 {
+  .col-#{$i}-right .column-#{$i} {
+    text-align: right;
+  }
+  .col-#{$i}-center .column-#{$i} {
+    text-align: center;
+  }
+}
