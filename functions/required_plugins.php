@@ -110,6 +110,13 @@ function my_theme_register_required_plugins() {
     		),
 
         array(
+      			'name'      => 'Fysiodanmark News',
+      			'slug'      => 'github-johnnietb-inzite-fysiodanmark-news',
+      			'source'    => 'https://github.com/johnnietb/inzite-fysiodanmark-news/archive/master.zip',
+      			'required'  => true,
+    		),
+
+        array(
       			'name'      => 'Github Updater',
       			'slug'      => 'github-updater',
       			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
