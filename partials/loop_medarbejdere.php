@@ -11,9 +11,11 @@
 	$id = get_field('portrat');
 	$size = 'portrait'; // (thumbnail, medium, large, full or custom size)
 	$image_attributes = wp_get_attachment_image_src( $id, $size );
+
+	$employee_style = get_field('employee_style', 'option');
 	?>
 
-	<div class="medarbejder_thumbnail">
+	<div class="medarbejder_thumbnail <?php echo $employee_style; ?>">
 		<div class="portrait">
 			<img src="<?php echo $image_attributes[0]; ?>" alt="" />
 		</div>

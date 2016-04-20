@@ -11,14 +11,17 @@
 		@include span-columns(12);
 		@include omega();
 	}
+
 	background-color: #ECECEC;
 	margin-bottom: $gutter;
+
+	&.ramme .portrait {
+		padding: 20px 20px 0 20px;
+	}
 }
 
 .portrait {
 	background-color: #ececec;
-  padding: 20px;
-  padding-bottom: 0;
 	img {
 		width: 100%;
     height: auto;
