@@ -11,6 +11,11 @@
 // Load any external files you have here
 
 // Navigation
+
+if ( !strpos(get_option( 'siteurl' ),'.dev') ) {
+  require_once( 'functions/custom_fields.php' );
+}
+
 require_once( 'functions/navigation/walkers/main_menu_walker.php' ); // Build navigation Walkers
 require_once( 'functions/navigation/nav_menus.php' ); // Build navigations
 require_once( 'functions/styles-scripts-loader.php' ); // Load stylesheets and javascripts
