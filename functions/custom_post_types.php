@@ -142,7 +142,7 @@ add_action( 'init', 'videos', 0 );
 	}
 
 	// Hook into the 'init' action
-	if (get_field('enable_produkter', 'option')) {
+	if (function_exists('get_field') && get_field('enable_produkter', 'option')) {
 		add_action( 'init', 'catalog_categories', 0 );
 		add_action( 'init', 'post_catalog', 0 );
 	}
@@ -227,7 +227,7 @@ function employees_categories() {
 
 }
 
-if (get_field('enable_employees', 'option')) {
+if (function_exists('get_field') && get_field('enable_employees', 'option')) {
 	// Hook into the 'init' action
 	add_action( 'init', 'employees_categories', 0 );
 	// Hook into the 'init' action
