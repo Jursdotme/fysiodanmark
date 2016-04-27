@@ -27,6 +27,10 @@ img {
     display: block;
     margin: 0 auto 1em auto;
   }
+  &.alignnone {
+    display: block;
+    margin: 0 0 1em 0;
+  }
 }
 
 .wp-caption {
