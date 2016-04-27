@@ -64,11 +64,6 @@ function my_theme_register_required_plugins() {
             'slug'      => 'so-widgets-bundle',
             'required'  => true,
         ),
-        array(
-            'name'      => 'Black Studio TinyMCE Widget',
-            'slug'      => 'black-studio-tinymce-widget',
-            'required'  => true,
-        ),
 
         array(
             'name'      => 'Duplicate Post',
