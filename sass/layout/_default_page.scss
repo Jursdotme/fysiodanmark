@@ -40,9 +40,7 @@
     margin-bottom: 6px;
     position: relative;
     z-index: 1000;
-    .help-text {
-      color: $base-font-color;
-    }
+    margin-left: 0 !important;
   }
 }
 
@@ -180,6 +178,16 @@ th {
       .ui-slider-range {
         filter: inherit;
       }
+    }
+    .ui-state-default {
+      border: none !important;
+    }
+    .ui-slider-handle {
+      top: 0 !important;
+      margin-left: 0;
+    }
+    &.ui-widget-content {
+      border: 0 !important;
     }
   }
 }

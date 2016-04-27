@@ -17,7 +17,11 @@
 
 	<div class="medarbejder_thumbnail <?php echo $employee_style; ?>">
 		<div class="portrait">
+			<?php if ( has_post_thumbnail() ) {
+			    the_post_thumbnail('portrait');
+			} else { ?>
 			<img src="<?php echo $image_attributes[0]; ?>" alt="" />
+			<?php } ?>
 		</div>
 		<div class="caption" data-mh="medarbejder-caption">
 			<h3><?php the_title(); ?></h3>

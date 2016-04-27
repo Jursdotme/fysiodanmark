@@ -169,7 +169,7 @@ function medarbejder_post_type() {
 		'label'               => __( 'medarbejder', 'text_domain' ),
 		'description'         => __( 'Klinikkens medarbejdere', 'text_domain' ),
 		'labels'              => $labels,
-		'supports'            => array( 'page-attributes', 'title', 'editor'),
+		'supports'            => array( 'title', 'editor', 'thumbnail'),
 		'taxonomies'          => array( 'employees_categories' ),
 		'hierarchical'        => false,
 		'public'              => true,
