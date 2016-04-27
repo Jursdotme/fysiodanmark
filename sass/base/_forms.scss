@@ -157,3 +157,22 @@ select {
     @include span-columns(12);
   }
 }
+
+.ccf-form {
+  .error {
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 400;
+    background: none;
+  }
+  .ccf-submit-button {
+    @extend %button-base;
+    @extend %button-raised;
+    background-color: $brand-color-1;
+    color: #fff;
+    &:hover {
+      background-color: shade($brand-color-1, 20%);
+    }
+  }
+}
