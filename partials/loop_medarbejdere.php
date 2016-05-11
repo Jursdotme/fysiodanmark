@@ -54,7 +54,11 @@ if (have_posts()):
 				<span class="icon icon-close close"><i class="fa fa-times"></i></span>
 				<div class="basic-info">
 					<div class="image">
-						<img src="<?php echo $image_attributes[0]; ?>" />
+						<?php if ( has_post_thumbnail() ) {
+						    the_post_thumbnail('portrait');
+						} else { ?>
+						<img src="<?php echo $image_attributes[0]; ?>" alt="" />
+						<?php } ?>
 					</div>
 					<div class="meta">
 						<h2><?php the_title(); ?></h2>
