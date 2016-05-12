@@ -82,12 +82,7 @@
 }
 
 .pf-content {
-	padding: $gutter;
-	max-height: 470px;
-	overflow-y: scroll;
-	@media (max-width: 540px) {
-		padding: $gutter/2;
-	}
+
 }
 
 .medarbejder-details-inner {
@@ -140,6 +135,9 @@
     float: left;
 
     width: 100%;
+		padding: $gutter;
+		max-height: 470px;
+		overflow-y: scroll;
 		@media (max-width: 540px) {
 			font-size: 0.8em;
 			//padding: $gutter/2;
