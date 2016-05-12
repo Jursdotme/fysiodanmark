@@ -81,6 +81,15 @@
   }
 }
 
+.pf-content {
+	padding: $gutter;
+	max-height: 470px;
+	overflow-y: scroll;
+	@media (max-width: 540px) {
+		padding: $gutter/2;
+	}
+}
+
 .medarbejder-details-inner {
   background-color: #fff;
   width: 790px;
@@ -129,11 +138,23 @@
   }
   .biography {
     float: left;
-    padding: $gutter;
+
+    width: 100%;
 		@media (max-width: 540px) {
 			font-size: 0.8em;
-			padding: $gutter/2;
+			//padding: $gutter/2;
 		}
+		position: relative;
+		//&:after {
+		//	content: "";
+		//	position: absolute;
+		//	top: 0;
+		//	left: 0;
+		//	width: 100%;
+		//	height: 100%;
+		//	pointer-events: none;
+	  //  box-shadow: 0 -60px 20px -20px white inset,0 50px 20px -20px white inset;
+		//}
   }
   .close {
     position: absolute;
