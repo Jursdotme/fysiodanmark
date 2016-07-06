@@ -177,8 +177,6 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
-if( function_exists('acf_add_local_field_group') ):
-
 acf_add_local_field_group(array (
 	'key' => 'group_577cd3f2eb476',
 	'title' => 'Video',
