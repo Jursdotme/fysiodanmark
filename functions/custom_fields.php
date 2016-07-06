@@ -177,6 +177,51 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_577cd3f2eb476',
+	'title' => 'Video',
+	'fields' => array (
+		array (
+			'key' => 'field_577cd3f77b86a',
+			'label' => 'video_url',
+			'name' => 'video_url',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'videos',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'seamless',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array (
+		0 => 'the_content',
+		1 => 'excerpt',
+	),
+	'active' => 1,
+	'description' => '',
+));
+
 acf_add_local_field_group(array (
 	'key' => 'group_54929b3dd07b3',
 	'title' => 'Medarbejdere',
