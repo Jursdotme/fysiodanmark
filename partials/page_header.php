@@ -1,5 +1,8 @@
 <!-- header -->
 
+<?php get_template_part('partials/print-branding'); ?>
+
+
 <?php
   // Setup Image data
   $id = get_field('header_logo', 'option');

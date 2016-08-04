@@ -1,0 +1,59 @@
+@media screen {
+  .print-branding {
+    display: none;
+  }
+}
+@media print {
+  body {
+    background:white;
+    color:black;
+    margin:0;
+  }
+
+  .print-branding {
+    width: 100%;
+    position: relative;
+    right: 0;
+    text-align: center;
+    margin-bottom: 100px;
+    .logo-img-print {
+      width: 120px;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .small {
+      color: #d8d8d8;
+      font-size: 10px;
+      margin-top: 10px;
+    }
+  }
+
+  .error404 main, .page main {
+    width: 90%;
+    max-width: 90%;
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 9000px;
+    margin: 0 auto 1em auto;
+  }
+
+  .frontpage-box, .not-home.page section {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .header_wrapper,
+  .utilities,
+  .mobile-menu-trigger,
+  .footer-container,
+  .widget_relaterede-artikler-widget,
+  .widget_fysiodanmark-mand-widget {
+    display: none;
+  }
+
+}
