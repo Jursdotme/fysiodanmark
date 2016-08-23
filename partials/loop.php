@@ -16,7 +16,7 @@
 		<div class="content">
 
 			<?php if (get_field('legacy', 'option')) { ?>
-				<p class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></p>
+				<p class="date"><?php the_time('j. F - Y'); ?></p>
 				<h2 class="title">
 					<i class="fa fa-angle-double-right"></i> <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 				</h2>
@@ -28,7 +28,7 @@
 				<h2 class="title">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 				</h2>
-				<p class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></p>
+				<p class="date"><?php the_time('j. F - Y'); ?></p>
 				<?php secondthoughtwp_excerpt('secondthoughtwp_index');
 			} ?>
 		</div>

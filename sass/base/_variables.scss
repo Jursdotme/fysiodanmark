@@ -35,14 +35,14 @@ $brand-color-3: #71bf44;
 $brand-color-4: #71bf44;
 
 // Grays
-$gray          : lighten(desaturate($brand-color-1, 65%), 30%);
-$grey-lightest : tint($gray, 92%);
-$grey-lighter  : tint($gray, 75%);
-$grey-light    : tint($gray, 50%);
+$grey          : lighten(desaturate($brand-color-1, 65%), 30%);
+$grey-lightest : lighten($grey, 18);
+$grey-lighter  : lighten($grey, 12);
+$grey-light    : lighten($grey, 8);
 
-$grey-dark     : shade($gray, 50%);
-$grey-darker   : shade($gray, 75%);
-$grey-darkest  : shade($gray, 92%);
+$grey-dark     : darken($grey, 50);
+$grey-darker   : darken($grey, 60);
+$grey-darkest  : darken($grey, 75);
 
 
 // Flash Colors

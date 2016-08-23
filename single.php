@@ -15,7 +15,7 @@
 					<?php the_title(); ?>
 				</h1>
 
-				<p class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></p>
+				<p class="date"><?php the_time('j. F - Y'); ?></p>
 
 				<?php the_content(); ?>
 

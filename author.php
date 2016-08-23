@@ -38,7 +38,7 @@
 				<!-- /Post title -->
 
 				<!-- post details -->
-				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+				<span class="date"><?php the_time('j. F - Y'); ?></span>
 				<span class="author"><?php _e( 'Published by', 'secondthought' ); ?> <?php the_author_posts_link(); ?></span>
 				<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'secondthought' ), __( '1 Comment', 'secondthought' ), __( '% Comments', 'secondthought' )); ?></span>
 				<!-- /post details -->
