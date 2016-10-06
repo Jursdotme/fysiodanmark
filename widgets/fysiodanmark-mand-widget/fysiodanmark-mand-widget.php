@@ -26,7 +26,27 @@ class Fysiodanmark_Mand_Widget extends SiteOrigin_Widget {
 		            'white' => __( 'Hvid', 'widget-form-fields-text-domain' ),
 								'old' => __( '2013 version', 'widget-form-fields-text-domain' ),
 		        )
-		    )
+		    ),
+				'hoved_nakke_link' => array(
+		        'type' => 'link',
+		        'label' => __('Hoved / nakke link', 'widget-form-fields-text-domain'),
+		        'default' => '/fysioterapi/hoved-nakke/'
+		    ),
+				'arme_albuer_skuldre_link' => array(
+		        'type' => 'link',
+		        'label' => __('Arme / Albuer / Skuldre link', 'widget-form-fields-text-domain'),
+		        'default' => '/fysioterapi/arme-albuer-skuldre/'
+		    ),
+				'ryg_torso_link' => array(
+		        'type' => 'link',
+		        'label' => __('Ryg / Torso link', 'widget-form-fields-text-domain'),
+		        'default' => '/fysioterapi/ryg-torso/'
+		    ),
+				'ben_knae_foedder_link' => array(
+		        'type' => 'link',
+		        'label' => __('Ben / Knæ / Fødder link', 'widget-form-fields-text-domain'),
+		        'default' => '/fysioterapi/ben-knae-foedder/'
+		    ),
 			),
 			get_template_directory_uri().'/widgets/fysiodanmark-mand-widget/'
 		);
