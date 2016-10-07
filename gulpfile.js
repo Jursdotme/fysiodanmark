@@ -9,7 +9,6 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     del = require('del'),
     cache = require('gulp-cached'),
-    stylestats = require('gulp-stylestats'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     header  = require('gulp-header'),
@@ -183,11 +182,6 @@ gulp.task('watch-release', function() {
 gulp.task('watch-admin', function() {
   gulp.watch(paths.customscripts, ['scripts-admin']);
   gulp.watch(paths.sass, ['sass-admin']);
-});
-
-gulp.task('stylestats', function () {
-  return gulp.src('build/stylesheets/style.css')
-    .pipe(stylestats());
 });
 
 gulp.task('csscss', function() {
