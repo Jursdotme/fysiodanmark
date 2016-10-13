@@ -1,0 +1,93 @@
+{
+    "key": "group_57ff69f63eddd",
+    "title": "Administrator",
+    "fields": [
+        {
+            "key": "field_57ff69f648686",
+            "label": "Produkter",
+            "name": "enable_produkter",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Aktiver produkter",
+            "default_value": 0
+        },
+        {
+            "key": "field_57ff69f6486c9",
+            "label": "Medarbejdere",
+            "name": "enable_employees",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Aktiver medarbejdere",
+            "default_value": 1
+        },
+        {
+            "key": "field_57ff69f64874a",
+            "label": "Brug gammel sideudseende",
+            "name": "legacy",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Brug gammel sideudseende",
+            "default_value": 0
+        },
+        {
+            "key": "field_57ff69f6487a1",
+            "label": "Sideoverskrifter",
+            "name": "no_headers",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Skjul automatiske overskrifter",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            },
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1476353797
+}

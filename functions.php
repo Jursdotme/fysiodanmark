@@ -12,9 +12,8 @@
 
 // Navigation
 
-if ( !strpos(get_option( 'siteurl' ),'.dev') ) {
-  require_once( 'functions/custom_fields.php' );
-}
+
+require_once( 'functions/custom_fields.php' );
 
 require_once( 'functions/navigation/walkers/main_menu_walker.php' ); // Build navigation Walkers
 require_once( 'functions/navigation/nav_menus.php' ); // Build navigations
@@ -69,7 +68,7 @@ add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove 
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 add_filter('excerpt_more', 'secondthought_view_article'); // Add 'Read more' button instead of [...] for Excerpts
-add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
+//add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'secondthought_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
@@ -158,4 +157,30 @@ function my_admin_error_notice() {
     echo"<div class=\"$class\"> <p><b>$message</b></p></div>";
   }
 
+}
+
+add_action('after_setup_theme','fysiodanmark_bw_size');
+function fysiodanmark_bw_size() {
+	add_image_size('fysiodanmark-bw-image', 1920, 1920, true);
+}
+
+add_filter('wp_generate_attachment_metadata','fysiodanmark_bw_filter');
+function fysiodanmark_bw_filter($meta) {
+	$file = wp_upload_dir();
+	$file = trailingslashit($file['path']).$meta['sizes']['fysiodanmark-bw-image']['file'];
+	list($orig_w, $orig_h, $orig_type) = @getimagesize($file);
+	$image = wp_load_image($file);
+	imagefilter($image, IMG_FILTER_GRAYSCALE);
+	switch ($orig_type) {
+		case IMAGETYPE_GIF:
+			imagegif( $image, $file );
+			break;
+		case IMAGETYPE_PNG:
+			imagepng( $image, $file );
+			break;
+		case IMAGETYPE_JPEG:
+			imagejpeg( $image, $file );
+			break;
+	}
+	return $meta;
 }
