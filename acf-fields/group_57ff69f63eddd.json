@@ -35,6 +35,64 @@
             "default_value": 1
         },
         {
+            "key": "field_58119e68fb458",
+            "label": "Portr\u00e6t bredde",
+            "name": "portrait_width",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57ff69f6486c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 300,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "min": "",
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_58119e91fb459",
+            "label": "Portr\u00e6t H\u00f8jde",
+            "name": "portrait_height",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_57ff69f6486c9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 300,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "min": "",
+            "max": "",
+            "step": 1
+        },
+        {
             "key": "field_57ff69f64874a",
             "label": "Brug gammel sideudseende",
             "name": "legacy",
@@ -89,5 +147,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1476353797
+    "modified": 1477542770
 }
