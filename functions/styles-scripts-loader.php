@@ -1,10 +1,10 @@
 <?php
 
 //////////////////////////////////////////////////////////////////////
-// Load Secondthought footer scripts (footer.php)
+// Load Fysiodanmark footer scripts (footer.php)
 
-function secondthought_header_scripts()
-{
+add_action('init', 'secondthought_header_scripts'); // Add Custom Scripts to wp_head
+function secondthought_header_scripts() {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
       wp_deregister_script( 'jquery' ); // Deregister WordPress jQuery
@@ -26,24 +26,17 @@ function secondthought_header_scripts()
     }
 }
 
-add_action('init', 'secondthought_header_scripts'); // Add Custom Scripts to wp_head
-
 //////////////////////////////////////////////////////////////////////
-// Load Secondthought conditional scripts
+// Load Fysiodanmark Login scripts
 
-function secondthought_conditional_scripts()
-{
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0', true); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
-    }
+add_action( 'login_enqueue_scripts', 'enqueue_my_login_script' );
+function enqueue_my_login_script() {
+    wp_enqueue_script( 'login-script', get_template_directory_uri() . '/javascripts/admin/login.js', array( 'jquery' ) );
 }
 
-// add_action('wp_print_scripts', 'secondthought_conditional_scripts'); // Add Conditional Page Scripts
-
 
 //////////////////////////////////////////////////////////////////////
-// Load Secondthought styles
+// Load Fysiodanmark styles
 
 
 function secondthought_styles()
