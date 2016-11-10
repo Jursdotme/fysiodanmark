@@ -84,4 +84,3 @@ function produktoversigt_layout($layouts){
   return $layouts;
 
 }
-add_filter('siteorigin_panels_prebuilt_layouts','fysiodanmark_prebuilt_layouts');

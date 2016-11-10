@@ -515,4 +515,3 @@ En vigtig del af FysioDanmark-samarbejdet at dele viden og erfaring på tværs a
   return $layouts;
 
 }
-add_filter('siteorigin_panels_prebuilt_layouts','fysiodanmark_prebuilt_layouts');
