@@ -107,7 +107,7 @@ function my_theme_register_required_plugins() {
 
         array(
       			'name'      => 'Github Updater',
-      			'slug'      => 'github-updater',
+      			'slug'      => 'github-afragen-github-updater',
       			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
       			'required'  => true,
     		),
