@@ -18,8 +18,8 @@ if (function_exists('register_sidebar'))
 
       register_sidebar(array(
         'name'          => __(get_sub_field('name'), 'secondthought'),
-        'description'   => "",
-        'id'            => sanitize_title( get_sub_field('description') ) . '-widget-area',
+        'description'   => get_sub_field('description'),
+        'id'            => sanitize_title( get_sub_field('name') ) . '-widget-area',
         'before_widget' => '<div id="%1$s" class="%2$s widget-area">',
         'after_widget'  => '</div>',
         'before_title'  => '<h3>',
@@ -30,4 +30,4 @@ if (function_exists('register_sidebar'))
   endif;
   }
 
-}
+} ?>
