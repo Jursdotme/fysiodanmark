@@ -1,9 +1,9 @@
 fieldset {
-  margin: 0 0 1.5rem;
-  padding: $gutter;
-  border: 1px solid $base-border-color;
-  background: $grey-lightest;
-  @include span-columns(12);
+    margin: 0 0 1.5rem;
+    padding: $gutter;
+    border: 1px solid $base-border-color;
+    background: $grey-lightest;
+    @include span-columns(12);
 }
 
 legend {
@@ -13,166 +13,182 @@ legend {
 input,
 label,
 select {
-  display: block;
-  font-size: 1rem;
-  font-family: $body-font;
+    display: block;
+    font-size: 1rem;
+    font-family: $body-font;
 }
 
 label {
-  margin-bottom: $base-line-height/4;
-  font-weight: bold;
+    margin-bottom: $base-line-height/4;
+    font-weight: bold;
 
-  &.required:after {
-    content: '*';
-  }
+    &.required:after {
+        content: '*';
+    }
 
-  abbr {
-    display: none;
-  }
+    abbr {
+        display: none;
+    }
 }
 
-textarea,
 #{$all-text-inputs},
-select[multiple=multiple] {
-  margin-bottom: $base-line-height/2;
-  padding: $gutter/6 $gutter/4;
-  width: 100%;
-  border: 1px solid $form-border-color;
-  border-radius: $form-border-radius;
-  background-color: $grey-lightest;
-  box-shadow: $form-box-shadow;
-  font-size: 1rem;
-  font-family: $body-font;
+select[multiple=multiple],
+textarea {
+    margin-bottom: $base-line-height/2;
+    padding: $gutter/6 $gutter/4;
+    width: 100%;
+    border: 1px solid $form-border-color;
+    border-radius: $form-border-radius;
+    background-color: $grey-lightest;
+    box-shadow: $form-box-shadow;
+    font-size: 1rem;
+    font-family: $body-font;
 
-  box-sizing: border-box;
-  transition: border-color;
+    box-sizing: border-box;
+    transition: border-color;
 
-  &:hover {
-    border-color: $form-border-color-hover;
-  }
+    &:hover {
+        border-color: $form-border-color-hover;
+    }
 
-  &:focus {
-    outline: none;
-    border-color: $form-border-color-focus;
-    box-shadow: $form-box-shadow-focus;
-  }
+    &:focus {
+        outline: none;
+        border-color: $form-border-color-focus;
+        box-shadow: $form-box-shadow-focus;
+    }
 }
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 [type='search'] {
-  appearance: none;
+    appearance: none;
 }
 
 [type='checkbox'],
 [type='radio'] {
-  display: inline;
-  margin-right: $base-line-height/4;
+    display: inline;
+    margin-right: $base-line-height/4;
 }
 
 [type='file'] {
-  margin-bottom: $base-line-height/2;
-  padding-bottom: ($base-line-height/3);
-  width: 100%;
+    margin-bottom: $base-line-height/2;
+    padding-bottom: ($base-line-height/3);
+    width: 100%;
 }
 
 select {
-  margin-bottom: $base-line-height;
-  max-width: 100%;
-  width: auto;
+    margin-bottom: $base-line-height;
+    max-width: 100%;
+    width: auto;
 }
 
 .wpcf7-form p {
-  @include span-columns(12);
-  span.wpcf7-not-valid-tip {
-      color: $error-color;
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 700;
-  }
-  &.half {
     @include span-columns(12);
-    @include media($md-up) {
-      @include span-columns(6);
-    }
-  }
 
-  &.quarter {
-    @include span-columns(12);
-    @include media($md-up) {
-      @include span-columns(3);
+    span.wpcf7-not-valid-tip {
+        color: $error-color;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 700;
     }
-  }
 
-  &.threequarter {
-    @include span-columns(12);
-    @include media($md-up) {
-      @include span-columns(9);
+    &.half {
+        @include span-columns(12);
+        @include media($md-up) {
+             @include span-columns(6);
+        }
     }
-  }
 
-  &.third {
-    @include span-columns(12);
-    @include media($md-up) {
-      @include span-columns(4);
+    &.quarter {
+        @include span-columns(12);
+        @include media($md-up) {
+             @include span-columns(3);
+        }
     }
-  }
 
-  &.twothird {
-    @include span-columns(12);
-    @include media($md-up) {
-      @include span-columns(8);
+    &.threequarter {
+        @include span-columns(12);
+        @include media($md-up) {
+             @include span-columns(9);
+        }
     }
-  }
 
-  &.full {
-    @include span-columns(12);
-  }
-
-  &.last {
-    @include media($md-up) {
-      @include omega;
+    &.third {
+        @include span-columns(12);
+        @include media($md-up) {
+             @include span-columns(4);
+        }
     }
-  }
+
+    &.twothird {
+        @include span-columns(12);
+        @include media($md-up) {
+             @include span-columns(8);
+        }
+    }
+
+    &.full {
+        @include span-columns(12);
+    }
+
+    &.last {
+        @include media($md-up) {
+             @include omega;
+        }
+    }
 }
 
 .wpcf7-submit {
-  @extend %button-base;
-  @extend %button-raised;
+    @extend %button-base;
+    @extend %button-raised;
 }
 
 .wpcf7-response-output {
-  &.wpcf7-validation-errors {
-    border: 0;
-    @extend %flash-alert;
-    margin: 0;
-    @include span-columns(12);
-  }
-  &.wpcf7-mail-sent-ok {
-    border: 0;
-    @extend %flash-success;
-    margin: 0;
-    @include span-columns(12);
-  }
+    &.wpcf7-validation-errors {
+        border: 0;
+        @extend %flash-alert;
+        margin: 0;
+        @include span-columns(12);
+    }
+
+    &.wpcf7-mail-sent-ok {
+        border: 0;
+        @extend %flash-success;
+        margin: 0;
+        @include span-columns(12);
+    }
 }
 
 .ccf-form {
-  .error {
-    margin-bottom: 0;
-    padding: 0;
-    border-radius: 0;
-    font-weight: 400;
-    background: none;
-  }
-  .ccf-submit-button {
+    .error {
+        margin-bottom: 0;
+        padding: 0;
+        border-radius: 0;
+        font-weight: 400;
+        background: none;
+    }
+
+    .ccf-submit-button {
+        @extend %button-base;
+        @extend %button-raised;
+        background-color: $brand-color-1;
+        color: #fff;
+
+        &:hover {
+            background-color: shade($brand-color-1, 20%);
+        }
+    }
+}
+
+.wysija-submit {
     @extend %button-base;
-    @extend %button-raised;
     background-color: $brand-color-1;
     color: #fff;
+
     &:hover {
-      background-color: shade($brand-color-1, 20%);
+        background-color: shade($brand-color-1, 20);
+        color: #fff;
     }
-  }
 }
