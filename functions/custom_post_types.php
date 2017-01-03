@@ -293,3 +293,19 @@ function global_news() {
 
 }
 add_action( 'init', 'global_news', 0 );
+
+
+/*
+replacing the default "Enter title here" placeholder text in the title input box
+with something more descriptive can be helpful for custom post types
+place this code in your theme's functions.php or relevant file
+source: http://flashingcursor.com/wordpress/change-the-enter-title-here-text-in-wordpress-963
+*/
+function wpfstop_change_default_title( $title ){
+    $screen = get_current_screen();
+    if ( 'medarbejder' == $screen->post_type ){
+        $title = 'Medarbejder navn';
+    }
+    return $title;
+}
+add_filter( 'enter_title_here', 'wpfstop_change_default_title' );
