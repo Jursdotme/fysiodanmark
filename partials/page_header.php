@@ -14,6 +14,31 @@
   <header class="header clear" role="banner">
     <div class="header-inner nav-right">
 
+      <?php if( have_rows('menu', 'option') ): ?>
+
+        <div class="top-nav">
+
+        <?php while ( have_rows('menu', 'option') ) : the_row();
+
+        if (get_field('internal_link')) {
+          echo '<a href="' . get_sub_field('link') . '">';
+        } else {
+          echo '<a href="' . get_sub_field('url') . '">';
+        }
+
+
+          if (get_sub_field('icon')) {
+            echo '<i class="fa ' . get_sub_field('icon') . '" aria-hidden="true"></i> ';
+          }
+
+          echo get_sub_field('label') . '</a>';
+
+        endwhile; ?>
+
+        </div>
+
+      <?php endif; ?>
+
       <div class='logo'>
         <a href='<?php echo home_url(); ?>'>
           <img src='<?php echo $image_attributes[0]; ?>' alt='Logo' class='logo-img'>
