@@ -1,13 +1,15 @@
 <div class="delt-indhold-container"></div>
 
 <script type="text/javascript">
-	$.getJSON( "<?php echo $instance['text']; ?>", function( data ) {
+
+	var str = "<?php echo $instance['text']; ?>";
+	var res = str.replace("/?json=get_page&amp;page_id=", "/wp-json/wp/v2/pages/");
+
+	$.getJSON( res, function( data ) {
 		var items = [];
 		$.each( data, function( key, val ) {
 			items.push( "<li id='" + key + "'>" + val + "</li>" );
 		});
-
-		console.log(data.content.rendered);
 
 		$( "<div/>", {
 			"class": "delt-indhold",
