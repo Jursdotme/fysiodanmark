@@ -3,8 +3,8 @@
 <html <?php language_attributes(); ?> class="no-js" data-logo-width="<?php echo get_theme_mod('logo_width'); ?>";>
 	<head>
 
-		<?php if (is_singular( 'medarbejder' )): ?>
-			<meta name="robots" content="noindex">
+		<?php if (is_singular( 'medarbejder' ) || is_singular('imm_members') ): ?>
+			<meta name="robots" content="noindex nofollow">
 		<?php endif; ?>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
