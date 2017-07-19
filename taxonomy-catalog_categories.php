@@ -4,16 +4,16 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php _e( 'Archives', 'secondthought' ); ?></h1>
+			<h1><?php echo get_the_archive_title(); ?></h1>
 
-			<?php get_template_part('partials/loop'); ?>
+			<?php get_template_part('partials/loop_produkter'); ?>
 
 			<?php get_template_part('partials/pagination'); ?>
 
 		</section>
 		<!-- /section -->
 
-		<?php get_sidebar(); ?>
+		<?php //get_sidebar(); ?>
 
 	</main>
 

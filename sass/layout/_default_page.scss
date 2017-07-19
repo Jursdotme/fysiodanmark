@@ -1,5 +1,6 @@
 .error404,
-.page {
+.page,
+.archive {
     main {
         @include secondthought-container;
         @include pad(0 $gutter/2);
@@ -10,7 +11,8 @@
     }
 }
 
-.not-home.page section {
+.not-home.page section,
+.archive section  {
     background-color: #fff;
     padding: 30px;
     border-radius: 5px;
